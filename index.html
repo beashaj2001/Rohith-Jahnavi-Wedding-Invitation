@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An elegant Indian wedding invitation for Kancharla Rohith and Puvvada Jahnavi.">
+  <meta name="theme-color" content="#f6efe2">
+  <title>Rohith & Jahnavi | Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="invitation-splash" id="invitation-splash">
+    <div class="invitation-splash__content">
+      <div class="invitation-splash__envelope">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10,30 L50,50 L90,30" stroke="#b78532" stroke-width="2" fill="none" />
+          <rect x="10" y="30" width="80" height="50" rx="4" stroke="#b78532" stroke-width="2" fill="none" />
+          <path d="M10,30 L50,60 L90,30" stroke="#b78532" stroke-width="1.5" fill="none" opacity="0.6" />
+        </svg>
+      </div>
+      <h2>Wedding Invitation</h2>
+      <p style="font-size: 1.4rem;">Kancharla Rohith & Puvvada Jahnavi</p>
+      <button class="invitation-splash__button" id="open-invitation">✉ Open Invitation</button>
+      <br><br><br>
+      <a class="invitation-splash__button secondary"
+        href="https://www.google.com/maps/search/?api=1&query=Gold+Convention+Function+Hall+Machilipatnam"
+        target="_blank" rel="noreferrer">
+        📍 View Wedding Venue
+      </a>
+      <br><br><br>
+      <a class="invitation-splash__button secondary" href="https://maps.app.goo.gl/bZqaGYMmqBUFGymj6?g_st=aw"
+        target="_blank" rel="noreferrer">
+        📍 View Reception Venue
+      </a>
+    </div>
+  </div>
+
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__mandala"></div>
+    <p>Preparing a royal celebration...</p>
+  </div>
+
+  <canvas id="petal-canvas" class="petal-canvas" aria-hidden="true"></canvas>
+
+  <audio id="bg-music" preload="auto" loop>
+    <source src="Shatamanam Bhavati - SenSongsMp3.Co.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="progress-pill" id="progress-pill">
+    <span></span>
+  </div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero__backdrop"></div>
+      <div class="hero__pattern hero__pattern--left"></div>
+      <div class="hero__pattern hero__pattern--right"></div>
+      <div class="hero__content reveal">
+        <p class="eyebrow">Wedding Invitation</p>
+        <div class="divine-chip">
+          <span>With the divine blessings of Lord Sri Rama and Sita Devi</span>
+        </div>
+        <h1 class="names">
+          <span class="names__first">Kancharla Rohith</span>
+          <span class="names__heart">❤</span>
+          <span class="names__second">Puvvada Jahnavi</span>
+        </h1>
+        <p class="hero__copy">
+          Together with their families, cordially invite you to grace the auspicious wedding ceremony and bless the
+          couple on their new beginning.
+        </p>
+        <div class="hero__actions">
+          <a class="primary-button" href="#invitation">View Invitation</a>
+          <a class="secondary-button" href="#timeline">See Ceremony</a>
+        </div>
+        <div class="hero__countdown" id="countdown" aria-live="polite">
+          <div><strong>00</strong><span>Days</span></div>
+          <div><strong>00</strong><span>Hours</span></div>
+          <div><strong>00</strong><span>Minutes</span></div>
+          <div><strong>00</strong><span>Seconds</span></div>
+        </div>
+      </div>
+
+      <div class="hero__card reveal tilt-card parallax-shell">
+        <div class="hero__card-inner">
+          <div class="hero__visual-layer hero__visual-layer--halo"></div>
+          <div class="hero__visual-layer hero__visual-layer--lotus"></div>
+          <div class="card-seal">29 APR 2026</div>
+          <p class="card-label">Mangala Aahwanam</p>
+          <h2>With Divine Blessings</h2>
+          <p class="card-text">
+            We solicit your gracious presence with family and friends to witness the wedding of
+            <strong>Kancharla Rohith</strong> and <strong>Puvvada Jahnavi</strong>.
+          </p>
+          <div class="card-divider"></div>
+          <p class="card-venue">Gold Convention Function Hall, Machilipatnam</p>
+          <div class="card-ornament"></div>
+          <div class="card-divider"></div>
+          <p class="card-venue">Kusuma Satya Expo Centre , Kakinada</p>
+          <div class="card-ornament"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blessing reveal" aria-label="Divine Blessings">
+      <div class="section-heading">
+        <p class="eyebrow">Divine Grace</p>
+        <h2>Blessed by the eternal grace of Rama and Sita</h2>
+      </div>
+      <div class="blessing__panel tilt-card parallax-shell">
+        <div class="blessing__content">
+          <p>
+            With the blessings of Lord Sri Rama and Sita Devi, we warmly invite you to grace this auspicious occasion
+            and bless the couple as they begin their new journey together.
+          </p>
+          <p>
+            Your esteemed presence and heartfelt blessings will make this sacred celebration a cherished memory for
+            our
+            families.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="invitation section-shell" id="invitation">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Invitation Details</p>
+        <h2>Wedding Muhurtham</h2>
+      </div>
+      <div class="details-grid">
+        <article class="detail-card reveal tilt-card">
+          <span class="detail-card__icon">✦</span>
+          <h3>Date</h3>
+          <p>29th April 2026</p>
+        </article>
+        <article class="detail-card reveal tilt-card">
+          <span class="detail-card__icon">◔</span>
+          <h3>Time</h3>
+          <p>7:29 AM</p>
+        </article>
+        <article class="detail-card reveal tilt-card">
+          <span class="detail-card__icon">⌂</span>
+          <h3>Venue</h3>
+          <p>Gold Convention Function Hall, Machilipatnam</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="trailer section-shell" id="trailer">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Engagement Trailer</p>
+        <h2>A glimpse into the celebrations</h2>
+      </div>
+      <div class="trailer__frame reveal tilt-card">
+        <div class="trailer__label">Play in full screen for a richer feel</div>
+        <div class="video-shell" id="video-shell">
+          <button class="video-shell__overlay" id="trailer-overlay" aria-label="Play engagement trailer" type="button">
+            <img class="video-shell__poster" src="https://img.youtube.com/vi/LJTthsYLGog/maxresdefault.jpg"
+              alt="Engagement trailer preview" loading="lazy">
+            <span class="video-shell__scrim"></span>
+            <span class="video-shell__play">
+              <span class="video-shell__play-icon">▶</span>
+              <span class="video-shell__play-text">Watch Trailer</span>
+            </span>
+          </button>
+          <iframe id="trailer-frame"
+            data-autoplay-src="https://www.youtube.com/embed/LJTthsYLGog?si=2IVmNyVCQdnBNFTh&autoplay=1"
+            src="https://www.youtube.com/embed/LJTthsYLGog?si=2IVmNyVCQdnBNFTh" title="YouTube video player"
+            style="width: 100%; height: 100%;" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+    <section class="gallery section-shell" id="gallery">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Couple Gallery</p>
+        <h2>Cherished moments of the couple</h2>
+      </div>
+
+      <div class="gallery__tabs reveal" role="tablist" aria-label="Gallery Tabs">
+        <button class="gallery__tab is-active" data-tab="couple" role="tab" aria-selected="true">Couple
+          Photos</button>
+        <button class="gallery__tab" data-tab="groom" role="tab" aria-selected="false">Groom Photos</button>
+        <button class="gallery__tab" data-tab="bride" role="tab" aria-selected="false">Bride Photos</button>
+      </div>
+
+      <div class="gallery__panel" data-panel="bride">
+        <button class="gallery-card reveal tilt-card" data-lightbox-title="Jahnavi - Portrait I"
+          data-lightbox-image="Pics/Jahnavi/Jahnavi1.JPG" data-theme="bride-1">
+          <span>Radiant elegance</span>
+        </button>
+        <button class="gallery-card reveal tilt-card" data-lightbox-title="Jahnavi - Portrait II"
+          data-lightbox-image="Pics/Jahnavi/Jahnavi2.jpg" data-theme="bride-2">
+          <span>Traditional grace</span>
+        </button>
+        <button class="gallery-card reveal tilt-card" data-lightbox-title="Jahnavi - Portrait III"
+          data-lightbox-image="Pics/Jahnavi/Jahnavi3.JPG" data-theme="bride-3">
+          <span>Pastel poise</span>
+        </button>
+      </div>
+
+      <div class="gallery__panel" data-panel="groom">
+        <button class="gallery-card reveal tilt-card" data-lightbox-title="Rohith - Portrait I"
+          data-lightbox-image="Pics/Bavagaru/Rohith1.jpg" data-theme="groom-1">
+          <span>Regal charisma</span>
+        </button>
+        <button class="gallery-card reveal tilt-card" data-lightbox-title="Rohith - Portrait II"
+          data-lightbox-image="Pics/Bavagaru/Rohith3.jpg" data-theme="groom-2">
+          <span>Classic style</span>
+        </button>
+        <button class="gallery-card reveal tilt-card" data-lightbox-title="Rohith - Portrait III"
+          data-lightbox-image="Pics/Bavagaru/Rohith2.jpg" data-theme="groom-3">
+          <span>Traditional charm</span>
+        </button>
+      </div>
+
+      <div class="gallery__panel is-active" data-panel="couple">
+        <button class="gallery-card reveal tilt-card" data-lightbox-title="Couple - Portrait I"
+          data-lightbox-image="Pics/Couple/Couple1.jpg" data-theme="couple-1">
+          <span>Sacred connection</span>
+        </button>
+        <button class="gallery-card reveal tilt-card" data-lightbox-title="Couple - Portrait II"
+          data-lightbox-image="Pics/Couple/Couple2.jpg" data-theme="couple-2">
+          <span>Golden memories</span>
+        </button>
+        <button class="gallery-card reveal tilt-card" data-lightbox-title="Couple - Portrait III"
+          data-lightbox-image="Pics/Couple/Couple3.JPG" data-theme="couple-3">
+          <span>Love Ride</span>
+        </button>
+      </div>
+
+      <section class="timeline section-shell" id="timeline">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Event Timeline</p>
+          <h2>Ceremony Schedule</h2>
+        </div>
+        <div class="timeline__line">
+          <article class="timeline__item reveal tilt-card">
+            <span class="timeline__time">28th April 6:00 PM</span>
+            <h3>Reception</h3>
+            <p>An elegant reception to celebrate the joyous occasion with family, friends, and esteemed guests.
+            </p>
+          </article>
+          <article class="timeline__item reveal tilt-card">
+            <span class="timeline__time">28th April 8:00 PM</span>
+            <h3>Dinner</h3>
+            <p>A fancy and delightful dinner experience featuring exquisite cuisine to make the celebration
+              memorable.</p>
+          </article>
+          <article class="timeline__item reveal tilt-card">
+            <span class="timeline__time">29th April 7:29 AM</span>
+            <h3>SuMuhurtham</h3>
+            <p>The sacred wedding ceremony begins at the auspicious muhurtham in the divine presence of elders
+              and loved
+              ones.</p>
+          </article>
+          <article class="timeline__item reveal tilt-card">
+            <span class="timeline__time">29th April 7:30 AM</span>
+            <h3>Breakfast</h3>
+            <p>A delicious breakfast will be served for guests to start the celebration with warmth and joy.</p>
+          </article>
+          <article class="timeline__item reveal tilt-card">
+            <span class="timeline__time">29th April 12:00 PM</span>
+            <h3>Lunch</h3>
+            <p>A traditional wedding lunch will be served thereafter for all family members, friends, and
+              esteemed guests.
+            </p>
+          </article>
+          <article class="timeline__item reveal tilt-card">
+            <span class="timeline__time">1st May 6:30 PM</span>
+            <h3>Reception</h3>
+            <p>Join us for an elegant evening reception filled with joy, laughter, and celebration.</p>
+          </article>
+
+          <article class="timeline__item reveal tilt-card">
+            <span class="timeline__time">1st May 7:30 PM</span>
+            <h3>Dinner</h3>
+            <p>A delightful dinner awaits with delicious cuisine to wrap up the celebrations on a perfect note.</p>
+          </article>
+        </div>
+
+        <section class="venue section-shell" id="venue">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Venue</p>
+            <h2>Venue Details</h2>
+          </div>
+          <div class="venue__grid">
+            <article class="venue__card reveal tilt-card">
+              <p class="venue__name">Gold Convention Function Hall</p>
+              <p class="venue__meta">Machilipatnam, Andhra Pradesh</p>
+              <p class="venue__copy">
+                We shall be honoured by your presence as we celebrate this joyful and sacred occasion in
+                Machilipatnam.
+              </p>
+              <div class="venue__actions">
+                <a class="primary-button"
+                  href="https://www.google.com/maps/search/?api=1&query=Gold+Convention+Function+Hall+Machilipatnam"
+                  target="_blank" rel="noreferrer">Open in Google Maps</a>
+              </div>
+            </article>
+          </div>
+          <div class="venue__grid">
+            <article class="venue__card reveal tilt-card">
+              <p class="venue__name">Kusuma Satya Expo Centre</p>
+              <p class="venue__meta">Kakinada, Andhra Pradesh</p>
+              <p class="venue__copy">
+                We shall be honoured by your presence as we celebrate this joyful and sacred occasion in
+                Kakinada.
+              </p>
+              <div class="venue__actions">
+                <a class="primary-button" href="https://maps.app.goo.gl/bZqaGYMmqBUFGymj6?g_st=aw" target="_blank"
+                  rel="noreferrer">Open in Google Maps</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="contact section-shell" id="contact">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Get in Touch</p>
+            <h2>For any further queries</h2>
+          </div>
+          <div class="contact__card reveal tilt-card">
+            <p class="contact__text">In case of any questions or require assistance regarding the wedding
+              celebration,
+              please feel free to reach out to us.</p>
+            <div class="contact__details">
+              <div class="contact__person">
+                <p class="contact__name">Likith</p>
+                <a href="tel:+917729903055" class="contact__phone">
+                  <span class="contact__phone-icon">📞</span>
+                  <span>7729903055</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" id="lightbox-close" aria-label="Close preview">×</button>
+    <div class="lightbox__content tilt-card" id="lightbox-content">
+      <div class="lightbox__image" id="lightbox-image"></div>
+      <h3 id="lightbox-title"></h3>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
